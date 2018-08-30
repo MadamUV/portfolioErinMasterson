@@ -12,7 +12,7 @@ export class DiagramComponent implements OnInit {
   ngOnInit() {
     console.log("blah");
   }
-  passColor(bool) {
+  /*passColor(bool) {
     const panel1 = document.getElementById("panel1");
     const panel2 = document.getElementById("panel2");
     if(bool){
@@ -25,5 +25,5 @@ export class DiagramComponent implements OnInit {
       panel1.setAttribute("class", "colorForwardBackChange");
       panel2.setAttribute("class", "colorBackChange");
     }
-  }
+  }*/
 }

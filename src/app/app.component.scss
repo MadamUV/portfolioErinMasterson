@@ -1,18 +1,43 @@
-#container, div {
+#container, div, #mySpan {
     display: flex;
     text-align: center;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-style: bold;
+    padding: 2%;
 }
-h2 {
-    
+#mySpan {
+    background-image: linear-gradient(silver, #9DD);
+    border-radius: 0em 0em 2em 0em;
     color: blue;
+    font-size: 2em;
+}
+@mixin myFlex($param) {
+    -webkit-box-flex: $param;
+    -ms-flex: $param;
+    -moz-box-flex: $param;
+    flex: $param;
+}
+@mixin myDisplayFlex() {
+    display: -webkit-flex;
+    display: flex;
+}
+#highestComponent div {
+    @include myFlex(1);
+}
+#highestCompoent {
+    @include myDisplayFlex();
+}
+#inSpan {
+    font-size: 1em;
+}
+#span2 {
+    display: none;
 }
 button {
     width: 9%;
     height: 9%;
 }
-@keyframes colorForwardChange {
+/* @keyframes colorForwardChange {
     from {color: blue;}
     to {color: orange;}
 }
@@ -27,7 +52,7 @@ button {
 .appliedBack {
     animation-name: colorBackChange;
     animation-duration: 3s;
-}
+}*/
 @media screen and (min-width: 900px), (orientation: landscape) {
     body {
         font-size: 14px;

@@ -1,0 +1,36 @@
+#container, div {
+    display: flex;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-style: bold;
+}
+h2 {
+    
+    color: blue;
+}
+button {
+    width: 9%;
+    height: 9%;
+}
+@keyframes colorForwardChange {
+    from {color: blue;}
+    to {color: orange;}
+}
+@keyframes colorBackChange {
+    from {color: orange;}
+    to {color: blue;}
+}
+.appliedForward {
+    animation-name: colorForwardChange;
+    animation-duration: 2s;
+}
+.appliedBack {
+    animation-name: colorBackChange;
+    animation-duration: 3s;
+}
+@media screen and (min-width: 900px), (orientation: landscape) {
+    body {
+        font-size: 14px;
+        display: block;
+    }
+}
